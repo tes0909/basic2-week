@@ -14,6 +14,14 @@ public class AnimationController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        // animationVariable = 0 IDLE animationVariable 1 = JUMP animationVariable 2 = ATTACK
+        // animationVariable가 012면 ++, 2보다크면 0
+        if (animationVariable < 2)
+            animationVariable++;
+        else
+            animationVariable = 0;
+
         animator.SetInteger("State", animationVariable);
+        Debug.Log("클릭, 현재 상태: " + animationVariable);
     }
 }
