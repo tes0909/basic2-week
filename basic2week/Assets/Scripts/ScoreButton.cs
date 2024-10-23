@@ -22,6 +22,5 @@ public class ScoreButton : MonoBehaviour
     {
         score += 1;
         OnScoreChanged?.Invoke(score);
-        Debug.Log($"점수추가 : {score}");
     }
 }
