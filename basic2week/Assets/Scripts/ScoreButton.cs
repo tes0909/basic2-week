@@ -9,7 +9,7 @@ public class ScoreButton : MonoBehaviour
     public Button scoreButton;
     public int score;
     public ScoreText scoreText;
-    public Action<int> OnScoreChanged;
+    public event Action<int> OnScoreChanged; //외부호출
 
     private void Awake()
     {
